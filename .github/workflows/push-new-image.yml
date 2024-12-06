@@ -63,14 +63,3 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: ${{ env.IMAGE_REPO }}/${{ env.IMAGE_NAME }}
-
-      # - name: Update README on Docker Hub
-      #   uses: christian-korneck/update-container-description-action@v1
-      #   env:
-      #     DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
-      #     DOCKER_PASS: ${{ secrets.DOCKERHUB_PASS }}
-      #   with:
-      #     provider: dockerhub
-      #     destination_container_repo:  ${{ env.IMAGE_REPO }}/${{ env.IMAGE_NAME }}
-      #     short_description: 'rsync+ssh configurable via args with configurable delay'
-      #     readme_file: README.md
